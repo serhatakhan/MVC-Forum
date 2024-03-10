@@ -25,6 +25,7 @@ Bu proje, bir forum uygulamasını **Model-View-Controller (MVC)** mimarisi kull
 
 ## Ekran Gifi
 
+![kayt1-ezgif com-video-to-gif-converter](https://github.com/serhatakhan/MVC-Forum/assets/147662915/54ff2a60-49f2-4b80-a649-571fa0949fd1)
 
 
 
