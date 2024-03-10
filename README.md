@@ -1,55 +1,30 @@
-# Kütüphaneler
+# MVC Forum
 
-- axios
-- json-server
-- react-router-dom
-- tailwind
+Bu proje, bir forum uygulamasını **Model-View-Controller (MVC)** mimarisi kullanarak geliştirmeyi amaçlamaktadır. MVC mimarisi, yazılım geliştirme sürecinde kodun yapılandırılmasını ve organize edilmesini sağlayan bir tasarım desenidir. Proje, forum uygulaması için ayrılmış olan Model, View ve Controller bileşenlerini içermekte olup forum uygulamasının geliştirilmesini sağlamakta ve kodun organizasyonu ile bakımını kolaylaştırmaktadır.
 
-# MVC (Model - View - Controller)
+* **Model**
 
-* Model:
+  Model kısmı, uygulamanın veri işleme ve mantıksal işlemlerinin yapıldığı bölümdür. Projede, ListModel ve CreateModel sınıfları yer almakta olup, axios kütüphanesi ile API istekleri gönderilmekte ve veritabanı işlemleri gerçekleştirilmektedir. ListModel, forumdaki gönderilerin listesini almak için API'ye istek gönderirken, CreateModel ise yeni gönderiler oluşturmak için API'ye POST isteği göndermektedir. Ayrıca hata yönetimi de Model kısmında gerçekleştirilmektedir.
 
-- Uygulamanın veri mantığını ve yapısını temsil eder. Örn:
-- Bileşende tutulacak bir state'in 'başlangıç değeri',
-- Veriyi formatlamaya yarayan bir fonksiyon,
-- Api istekleri,
-- Genellikle `class` yapısıyla tanımlanır.
+* **View**
+  
+  View kısmı, kullanıcı arayüzünün görüntülendiği bölümdür. Bu projede, ListView ve CreateView bileşenleri bulunmaktadır. ListView, forumdaki gönderilerin listesini görüntülerken, CreateView yeni gönderi oluşturma formunu kullanıcıya sunmaktadır. View kısmı, kullanıcı etkileşimleri ile ilgili işlemleri Controller kısmına iletmektedir.
 
-* View:
+* **Controller**
+  
+  Controller kısmı, kullanıcı etkileşimlerini işleyen ve Model ile View arasında iletişimi sağlayan bölümdür. Bu projede, ListController ve CreateController bileşenleri bulunmaktadır. ListController, forumdaki gönderilerin listesini almak ve kullanıcı etkileşimlerini izlemekle sorumludur. CreateController ise yeni gönderi oluşturma formunun gönderilmesini işler. Controller, Model ve View arasında veri akışını sağlar ve kullanıcı etkileşimlerini yönetir.
 
-- Son kullancının gördüğü tasarımdır.
-- Bileşenin return satırına yazdığımız jsx elementleri burada tanımlanır.
+## Kullanılan Teknolojiler
 
-* Controller:
+- Axios
+- Json-Server
+- React-Router-Dom
+- React-Toastify
+- Tailwind
+- Uuid
 
-- View ile Model arasındaki bağlantıyı sağlar.
-- Kullancı etkileşimiyle tetiklenecek tüm fonksiyonlar, stateler vb yapılar burada tanımlanır.
+## Ekran Gifi
 
 
-# MVC Klasör Yapısı:
 
-## 1.YOL:
-- public
-- src
-- - pages
-- - - MainPage
-- - - - MainPageController
-- - - - MainPageView
-- - - - MainPageModel
-- - - AuthPage
-- - - - AuthPageController
-- - - - AuthPageView
-- - - - AuthPageModel
 
-## 2.YOL:
-- public
-- src
-- - controllers
-- - - MainPageController
-- - - AuthPageController
-- - models
-- - - MainPageModel
-- - - AuthPageModel
-- - views
-- - - MainPageView
-- - - AuthPageView
